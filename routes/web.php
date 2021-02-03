@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 //Solving GitHubCredentials
 
 //NOTA1
@@ -36,7 +32,7 @@ Route::get('/', function () {
 //Llama al resources/views/test.blade.php
 // Route::get('test', function(){
 //     return view('test');
-// });
+ //});
 
 //NOTA4
 //Muestra la variable recogida en la request GET http://localhost:8080/?variable=hola
@@ -46,15 +42,15 @@ Route::get('/', function () {
 // });
 
 //NOTA5
-//Route::get('/', function () {
-//    $variable = request('variable');
-//    return view('test',[
-//        'variable' => $variable
+Route::get('/', function () {
+   $variable = request('variable');
+   return view('test',[
+       'variable' => $variable
         //segundo parámetro del view() es un array al que se le pasa en la clave el nombre que la vista cargará desde dicha variable local 
         //hacia la nueva variable que la vista (valor de la clave) cargará entre la etiqueta <?= $variable
         //Para enviar el valor hacia la vista, sin el array, solamente haría falta usar <?= {{ $variable }}
         //Inyección JS desde GET http://localhost:8080/?variable=<script>alert("does")</script>
-//    ]);
-//});
+   ]);
+});
 
 
