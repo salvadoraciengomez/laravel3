@@ -55,7 +55,7 @@ use Illuminate\Support\Facades\Route;
 
 
 #NOTA6 Recoge variable $elPost (GET) y devuelve la clave del array
-Route::get('posts/{post}', function($elPost){
+Route::get('posts/{entradas}', function($elPost){
     //return view('posts');
 
     $entradas=[
@@ -69,6 +69,8 @@ Route::get('posts/{post}', function($elPost){
     return view('posts', [
         'elPost' => $entradas[$elPost] //?? 'Default option if no key match' VER NOTA7
     ]);
+
+    #Nota8 - Uso de Controller
 });
 
 
