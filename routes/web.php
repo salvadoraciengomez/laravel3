@@ -64,7 +64,7 @@ Route::get('posts/{post}', function($elPost){
     ];
 
     #Nota7
-    if (! array_key_exists($elPost, $entradas)) abort(404,'No se ha encontrado la clave del array')
+    if (! array_key_exists($elPost, $entradas)) abort(404,'No se ha encontrado la clave del array');
 
     return view('posts', [
         'elPost' => $entradas[$elPost] //?? 'Default option if no key match' VER NOTA7
