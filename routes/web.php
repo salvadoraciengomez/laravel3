@@ -64,7 +64,7 @@ Route::get('posts/{post}', function($elPost){
     ];
 
     return view('posts', [
-        'elPost' => $entradas[$elPost]
+        'elPost' => $entradas[$elPost] ?? 'Default option if no key match'
     ]);
 });
 
