@@ -53,8 +53,19 @@ use Illuminate\Support\Facades\Route;
 //    ]);
 // });
 
-Route::get('posts/{post}', function(){
-    return view('posts');
+
+#NOTA6 Recoge variable $elPost (GET) y devuelve la clave del array
+Route::get('posts/{post}', function($elPost){
+    //return view('posts');
+
+    $entradas=[
+        'entry' => 'Texto de la primera entrada',
+        'entry2'=> 'UYUYUYUYUMigatohace'
+    ];
+
+    return view('posts', [
+        'elPost' => $entradas[$elPost]
+    ]);
 });
 
 

@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Routing GETvars</h1>
+    {{ $elPost }}
 </body>
 </html>
