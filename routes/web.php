@@ -70,7 +70,6 @@ Route::get('posts/{entradas}', function($elPost){
         'elPost' => $entradas[$elPost] //?? 'Default option if no key match' VER NOTA7
     ]);
 
-    #Nota8 - Uso de Controller
 });
 
 
