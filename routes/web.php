@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EntriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,4 +73,7 @@ Route::get('posts/{entradas}', function($elPost){
 
 });
 
+
+
+Route::get('/controlador/{elPost}', [EntriesController::class,'show']);
 
