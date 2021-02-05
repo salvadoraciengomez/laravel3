@@ -42,16 +42,16 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //NOTA5
-// Route::get('/', function () {
-//    $variable = request('variable');
-//    return view('test',[
-//        'variable' => $variable
-//         //segundo parámetro del view() es un array al que se le pasa en la clave el nombre que la vista cargará desde dicha variable local 
-//         //hacia la nueva variable que la vista (valor de la clave) cargará entre la etiqueta <?= $variable
-//         //Para enviar el valor hacia la vista, sin el array, solamente haría falta usar <?= {{ $variable }}
-//         //Inyección JS desde GET http://localhost:8080/?variable=<script>alert("does")</script>
-//    ]);
-// });
+Route::get('/', function () {
+   $variable = request('variable');
+   return view('test',[
+       'variable' => $variable
+        //segundo parámetro del view() es un array al que se le pasa en la clave el nombre que la vista cargará desde dicha variable local 
+        //hacia la nueva variable que la vista (valor de la clave) cargará entre la etiqueta <?= $variable
+        //Para enviar el valor hacia la vista, sin el array, solamente haría falta usar <?= {{ $variable }}
+        //Inyección JS desde GET http://localhost:8080/?variable=<script>alert("does")</script>
+   ]);
+});
 
 
 #NOTA6 Recoge variable $elPost (GET) y devuelve la clave del array
